@@ -55,7 +55,7 @@ int main()
     printf(" PIB per capta: %.2f\n", PIBpc1);
     printf(" Número de pontos turísticos: %d\n", atracoes1);
     printf(" Super Poder: %.2f",SPoder1);
-    printf("\nDADOS DA CARTA 2\n");
+    printf("\nDADOS DA CARTA 2\n"); //exibe os dados da carta 2
     printf(" Código: %s\n", codigo2);
     printf(" Estado: %s\n", estado2);
     printf(" Cidade: %s\n", cidade2);
@@ -66,16 +66,50 @@ int main()
     printf(" PIB per capta: %.2f\n", PIBpc2);
     printf(" Número de pontos turísticos: %d\n", atracoes2);
     printf(" Super Poder: %.2f",SPoder2);
-    printf("\n**COMPARAÇÃO ENTRE AS DUAS CARTAS\n");
-    int Rarea = area1 > area2, Rpop = populacao1 > populacao2, RPIB = PIB1 > PIB2;
-    int RApc = Apc1 < Apc2, RPIBpc = PIBpc1 > PIBpc2;
-    int Ratracoes = atracoes1 > atracoes2;
-    int RSPoder = SPoder1 > SPoder2;
-    printf("Área: Carta 1 vence? %d\n", Rarea);
-    printf("População: Carta 1 vence? %d\n", Rpop);
-    printf("PIB: Carta 1 vence? %d\n", RPIB);
-    printf("Densidade Populaciona: Carta 1 vence? %d\n", RApc);
-    printf("PIB per capta: Carta 1 vence? %d\n", RPIBpc);
-    printf("Pontos Turísticos: Carta 1 vence? %d\n", Ratracoes);
-    printf("Super Poder: Carta 1 vence? %d\n", RSPoder);
+    printf("\n**COMPARAÇÃO ENTRE AS DUAS CARTAS\n"); //compara as duas cartas, em cada um dos atributos
+    int CARTA1 = 0, CARTA2 = 0; //declara e atribui o valor 0 à somatória de pontos de cada carta. Cada atributo vencido recebe um ponto
+    if(area1 > area2){
+       printf("ÁREA: CARTA 1 VENCE\n");
+       CARTA1 = 1;
+       }else{printf("ÁREA: CARTA 2 VENCE\n");
+        CARTA2 = 1;
+       }
+    if(populacao1 > populacao2){
+       printf("POPULAÇÃO: CARTA 1 VENCE\n");
+       CARTA1++;
+       }else{printf("POPULAÇÃO: CARTA 2 VENCE\n");
+        CARTA2++;
+       }
+    if(PIB1 > PIB2){
+       printf("PIB: CARTA 1 VENCE\n");
+       CARTA1++;
+       }else{printf("PIB: CARTA 2 VENCE\n");
+        CARTA2++;
+       }
+    if(DensPop1 < DensPop2){
+       printf("DENSIDADE POPULACIONAL: CARTA 1 VENCE\n");
+       CARTA1++;
+       }else{printf("DENSIDADE POPULACIONAL: CARTA 2 VENCE\n");
+        CARTA2++;
+       }
+    if(PIBpc1 > PIBpc2){
+       printf("PIB per capta: CARTA 1 VENCE\n");
+       CARTA1++;
+       }else{printf("PIB per capta: CARTA 2 VENCE\n");
+        CARTA2++;
+       }
+    if(atracoes1 > atracoes2){
+       printf("NÚMERO DE PONTOS TURÍSTICOS: CARTA 1 VENCE\n");
+       CARTA1++;
+       }else{ printf("NÚMERO DE PONTOS TURÍSTICOS: CARTA 2 VENCE\n");
+        CARTA2++;
+       }
+    if(SPoder1 > SPoder2){
+       printf("SUPER PODER: CARTA 1 VENCE\n"); //a carta que vence o Super Poder ganha 2 pontos
+       CARTA1 = CARTA1+2;
+       }else{ printf("SUPER PODER: CARTA 2 VENCE\n");
+        CARTA2 = CARTA2+2;
+       }
+    printf(" Carta 1 tem %d pontos\n Carta 2 tem %d pontos\n", CARTA1, CARTA2);
 }
+    
