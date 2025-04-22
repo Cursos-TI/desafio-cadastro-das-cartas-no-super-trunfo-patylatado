@@ -40,8 +40,8 @@ int main()
     DensPop2 = (float) populacao2/area2; //calcula a densidade populacional da cidade 2
     PIBpc1 = (float) PIB1/populacao1; //calcula o PIB per capta da cidade 1
     PIBpc2 = (float) PIB2/populacao2; //calcula o PIB per capta da cidade 2
-    SPoder1 = Apc1+PIBpc1+area1+atracoes1+populacao1+PIB1; // calcula o super poder 
-    SPoder2 = Apc2+PIBpc2+area2+atracoes2+populacao2+PIB2; // calcula o super poder 
+    SPoder1 = PIBpc1+area1+atracoes1+populacao1+PIB1-DensPop1; // calcula o super poder 
+    SPoder2 = PIBpc2+area2+atracoes2+populacao2+PIB2-DensPop2; // calcula o super poder 
     printf("\nDADOS DA CARTA 1\n"); //exibe os dados da carta 1
     printf(" Código: %s\n", codigo1);
     printf(" Estado: %s\n", estado1);
