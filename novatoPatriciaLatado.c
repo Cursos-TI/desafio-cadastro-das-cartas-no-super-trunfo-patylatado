@@ -37,9 +37,7 @@ int main()
     printf("Digite o número de pontos turísticos\n");
     scanf("%d", &atracoes2);
     DensPop1 = (float)populacao1/area1; //calcula a densidade populacional da cidade 1
-    Apc1 = 1/DensPop1; //calcula a área per capta da cidade 1
     DensPop2 = (float) populacao2/area2; //calcula a densidade populacional da cidade 2
-    Apc2 = 1/DensPop2; //calcula a área per capta da cidade 2
     PIBpc1 = (float) PIB1/populacao1; //calcula o PIB per capta da cidade 1
     PIBpc2 = (float) PIB2/populacao2; //calcula o PIB per capta da cidade 2
     SPoder1 = Apc1+PIBpc1+area1+atracoes1+populacao1+PIB1; // calcula o super poder 
